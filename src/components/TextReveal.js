@@ -7,15 +7,16 @@ function TextReveal() {
     const [lettersRef, setlettersRef] = useArrayRef();
     const triggerRef = useRef(null)
 
-    const text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut."
-    gsap.registerPlugin(ScrollTrigger);
-
+    
     function useArrayRef() {
         const lettersRef = useRef([]);
         lettersRef.current = [];
         return [lettersRef, (ref) => ref && lettersRef.current.push(ref)];
     }
-
+    
+    gsap.registerPlugin(ScrollTrigger);
+    const text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut."
+    
   return (
     <>
     <div className="spacing-small"></div>
