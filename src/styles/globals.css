@@ -1,9 +1,9 @@
 *,
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -44,6 +44,6 @@ body {
 
 @media screen and (max-width: 500px) {
   .reveal {
-      padding-left: 10px;
+    padding-left: 10px;
   }
 }
