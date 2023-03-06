@@ -17,6 +17,28 @@ function TextReveal() {
     gsap.registerPlugin(ScrollTrigger);
     const text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut."
     
+    useEffect(() => {
+        const anim = gsap.to(
+            lettersRef.current,
+            {
+                scrollTrigger: {
+                    trigger: triggerRef.current,
+                    scrub: true,
+                    markers:true,
+                    start: "top center",
+                    end: "bottom 85%"
+
+                },
+                color: "#2A2A2A",
+                duration: 5,
+                stagger: 1,
+            }
+        );
+        return (() => {
+            anim.kill()
+        })
+    }, []);
+
   return (
     <>
     <div className="spacing-small"></div>

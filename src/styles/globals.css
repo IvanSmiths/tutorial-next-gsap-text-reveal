@@ -17,4 +17,33 @@ body {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--backgroundColor);
+}
+
+.reveal {
+  background: var(--backgroundColor);
+  padding-left: 30%;
+  padding-right: 10%;
+}
+
+.reveal-text {
+  font-weight: 800;
+  font-size: var(--headlineBig);
+  line-height: var(--headlineBig);
+  color: var(--backgroundColor);
+  filter: drop-shadow(0 0 0.06rem rgb(2, 2, 2));
+}
+
+.spacing-small {
+  height: 50vh;
+}
+
+.spacing {
+  height: 100vh;
+}
+
+@media screen and (max-width: 500px) {
+  .reveal {
+      padding-left: 10px;
+  }
 }
